@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Blog</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}"
+    </head>
+    <body>
+       <h1>Blog</h1> 
+       <div class="blog-post">
+            {% for post in posts %}
+                <div class="blog-posts">
+                    <h2>{{ post.title }}</h2>
+                    <p> {{ post.created_at|date:"F j,Y"}}</p>
+
+
+                    {% if post.image %}
+                        <img src="{{ post.image.url}}" alt="{{ post.title }}" style="width: 100%; max-width: 600px;">
+                    {% endif %}   
+
+                    {% if post.video %}
+                        <video controls style="width: 100%; max-width: 600px;">
+                            <source src="{{ post.video.url }}" type="video/mp4"> 
+                            Your browser does not support the video tag.
+                        </video>
+                    {% endif %}
+
+                    <p>{{ post.content }}</p>
+                </div>
+                <hr>
+            {% endfor %}
+       </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'porfolio/styles.css' %}"
+    </head>
+    <body>
+        <h1>About Me</h1>
+        <header>
+            <nav>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about-text">
+                <h1>A Glimpse of My Mind</h1>
+                <p>
+                    Hi, I'm Wambugu Moses, a passionate developer specializing in creating mobile applications, websites, 
+                    and graphic designs. I love solving problems and building functional, visually appealing digital solutions.
+                </p>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>Bachelor of Science in Computer Science -</strong> Maasai Mara University (Expected: 2028)</li>
+                    <li><strong>Certificate in Digital Marketing</strong> - The Toolkit Skills and Innovation Hub (2024)</li>
+                </ul>
+            </section>
+    
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <ul>
+                        <li>Flutter & Dart</li>
+                        <li>Python & Django</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>MySQL & Firebase</li>
+                        <li>Graphic Design (Canva)</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section id="resume">
+                <h2>Resume</h2>
+                <p>
+                    Download my resume to learn more about my skills, experience, and education.
+                </p>
+                <a href="{% static 'main/resume.pdf' %}" class="btn" download>Download Resume</a>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Wambugu Moses. All rights reserved.</p>
+        </footer>
+        </main>
+    </body>
+</html>   

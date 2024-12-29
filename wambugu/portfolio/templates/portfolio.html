@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}"
+    </head>
+    <body>
+        <h1>Portfolio</h1>
+        <p>Explore my work by category. Click on a category to view related projects!</p>
+
+        <div id="portfolio" class="card-container">
+            {% for category in categories %}
+                <div class="card">
+                    <h3>{{ category.name }}</h3>
+                    <p>{{ category.description }}</p>
+                    <a href="{% url 'category_projects' category.name %}" class="view-projects-btn">View Projects</a>
+                </div>
+            {% endfor %}
+        </div>
+
+    </body>    
+</html>
