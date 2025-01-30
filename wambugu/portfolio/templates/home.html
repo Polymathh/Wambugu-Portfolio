@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="{% static 'porfolio/styles.css' %}"
     </head>
     <body>
-        <h1>Welcome to My Portfolio</h1>
         <header>
             <nav>
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -20,9 +19,13 @@
         </header>
 
         <main>
+            <p>Creating tech solutions that matter. What’s your next big idea?</p>
             <section class="hero">
-                <h2>Hello, I'm Wambugu Moses</h2>
-                <p>A passionate developer with expertise in mobile apps, web applications and graphic design.</p>
+                <h1>Hello, I'm Wambugu Moses</h1>
+                <article>I am a full-stack developer. I specialize in building web and mobile applications from front to back, using Flutter, Firebase, Python, Django, Node.js, and MySQL. With expertise in UI/UX, backend development, and database management, I create seamless, scalable, and user-friendly digital experiences.
+                    Passionate about AI Engineering and data-driven solutions, I blend technology and creativity to develop impactful products. Whether it's a dynamic web app, a feature-rich mobile platform, or a secure backend system, I bring ideas to life with innovation and efficiency.                    
+                    Let’s build something extraordinary!
+                </article>
                 <a href="{% url 'portfolio' %}" class="btn">View My Work</a>
             </section>
         </main>
