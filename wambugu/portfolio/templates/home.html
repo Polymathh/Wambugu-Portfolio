@@ -5,7 +5,7 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Wambugu Moses</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'porfolio/styles.css' %}"
+        <link rel="stylesheet" href="{% static 'styles.css' %}"
     </head>
     <body>
         <header>
@@ -19,19 +19,36 @@
         </header>
 
         <main>
-            <p>Creating tech solutions that matter. What’s your next big idea?</p>
-            <section class="hero">
-                <h1>Hello, I'm Wambugu Moses</h1>
-                <article>I am a full-stack developer. I specialize in building web and mobile applications from front to back, using Flutter, Firebase, Python, Django, Node.js, and MySQL. With expertise in UI/UX, backend development, and database management, I create seamless, scalable, and user-friendly digital experiences.
-                    Passionate about AI Engineering and data-driven solutions, I blend technology and creativity to develop impactful products. Whether it's a dynamic web app, a feature-rich mobile platform, or a secure backend system, I bring ideas to life with innovation and efficiency.                    
-                    Let’s build something extraordinary!
-                </article>
-                <a href="{% url 'portfolio' %}" class="btn">View My Work</a>
-            </section>
+            <div class="container">
+                <div class="column1">
+                    <h1 class="name">I'm Wambugu <br class="name1">Moses</h1>
+                    <p>
+                        I am a full-stack developer. I specialize in building web and mobile applications from front to back, using Flutter, Firebase, Python, Django, Node.js, and MySQL. With expertise in UI/UX, backend development, and database management, I create seamless, scalable, and user-friendly digital experiences.
+                        Passionate about AI Engineering and data-driven solutions, I blend technology and creativity to develop impactful products. Whether it's a dynamic web app, a feature-rich mobile platform, or a secure backend system, I bring ideas to life with innovation and efficiency.                    
+                        Let’s build something extraordinary!
+                    </p>
+                </div>
+                    
+                <div class="column2">
+                    <div>
+                        <h1>I am...</h1>
+                        <h2 class="typewriter"></h2><br>
+                    </div>
+                </div>
+            </div>
+
+          
         </main>
+        <div><a href="{% url 'portfolio' %}" class="btn">View My Work</a></div>
+
+                
+        <div>
+        <p>Creating tech solutions that matter. What’s your next big idea?</p>
+        </div>
 
         <footer>
             <p>&copy; 2024 Wambugu Moses. All rights reserved.</p>
         </footer>
+        <script src="{% static 'script.js' %}" defer></script>
     </body>
 </html>
