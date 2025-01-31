@@ -5,7 +5,9 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Wambugu Moses</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'styles.css' %}"
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     </head>
     <body>
         <header>
@@ -36,19 +38,14 @@
                     </div>
                 </div>
             </div>
-
-          
-        </main>
-        <div><a href="{% url 'portfolio' %}" class="btn">View My Work</a></div>
-
-                
-        <div>
-        <p>Creating tech solutions that matter. What’s your next big idea?</p>
-        </div>
-
-        <footer>
-            <p>&copy; 2024 Wambugu Moses. All rights reserved.</p>
-        </footer>
+            
+            <div class="socials"> 
+                <a href="https://www.linkedin.com/https:/in/moses-wambugu-a33a662b1" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Polymathh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@polymath.stem" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/+254704141329" target="_blank"><i class="fab fa-whatsapp"></i></a>           
+            </div>
+        </main>        
         <script src="{% static 'script.js' %}" defer></script>
     </body>
 </html>
