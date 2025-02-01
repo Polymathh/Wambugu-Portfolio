@@ -5,10 +5,9 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>About</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'porfolio/styles.css' %}"
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
-        <h1>About Me</h1>
         <header>
             <nav>
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -20,62 +19,46 @@
         </header>
 
         <main>
-            <section id="about-text">
-                <h1>A Glimpse of My Mind</h1>
-                <article>
-                    <h2>About Me</h2>
-                    <p>Hi, I'm <strong>Wambugu Moses</strong>, a passionate tech enthusiast and STEM lover with a deep curiosity for solving real-world problems through innovation. My journey spans <strong>web and mobile app development</strong>, <strong>AI engineering</strong>, and <strong>cybersecurity</strong>, where I merge creativity and technology to build impactful solutions.</p>
-                
-                    <h3>My Mission</h3>
-                    <p>I believe in using technology as a tool to drive positive change. Whether it's crafting sleek, user-friendly interfaces or designing secure, data-driven backend systems, my goal is to create solutions that make life easier and inspire others to explore the limitless possibilities of STEM.</p>
-                
-                    <h3>What Drives Me</h3>
-                    <ul>
-                        <li><strong>Curiosity</strong>: I’m always eager to learn and embrace new challenges, especially in fast-evolving fields like <strong>AI, cybersecurity, and mobile development</strong>.</li>
-                        <li><strong>Innovation</strong>: I thrive on creating tools and platforms that empower individuals, organizations, and communities.</li>
-                        <li><strong>Collaboration</strong>: I value teamwork and the power of shared ideas in driving success.</li>
-                    </ul>
-                
-                    <p>When I'm not coding or brainstorming new project ideas, you'll often find me exploring new advancements in <strong>AI</strong>, mentoring aspiring developers, or reading about <strong>emerging technologies in STEM</strong>.</p>
-                
-                    <p>Let’s build the future, one line of code at a time.</p>
-                </article>
-                
-            </section>
+            <div class="container1">
+                <div class="grid-container">
+                    <section id="about-text">
+                        <img class="img" src="{% static 'images/Wambugu.jpeg' %}" alt="my photo">
+                        <h2>About Me</h2>
+                        <p>I'm <strong>Wambugu Moses</strong>, a passionate tech enthusiast and STEM lover with a deep curiosity for solving real-world problems through innovation. My journey spans <strong>web and mobile app development</strong> and <strong>AI Engineering</strong>, where I merge creativity and technology to build impactful solutions.</p>
+                                                
+                    </section>
 
-            <section id="education">
-                <h2>Education</h2>
-                <ul>
-                    <li><strong>Bachelor of Science in Computer Science -</strong> Maasai Mara University (Expected: 2028)</li>
-                    <li><strong>Certificate in Digital Marketing</strong> - The Toolkit Skills and Innovation Hub (2024)</li>
-                </ul>
-            </section>
-    
-            <section id="skills">
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <ul>
-                        <li>Flutter & Dart</li>
-                        <li>Python & Django</li>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>MySQL & Firebase</li>
-                        <li>Graphic Design (Canva)</li>
-                    </ul>
+                    <section id="skills">
+                        <p>I believe in using technology as a tool to drive positive change. Whether it's crafting sleek, user-friendly interfaces or designing secure, data-driven backend systems, my goal is to create solutions that make life easier and inspire others to explore the limitless possibilities of STEM.</p>        
+                        <p>When I'm not coding or brainstorming new project ideas, you'll often find me exploring new advancements in <strong>AI</strong>, mentoring aspiring developers, or reading about <strong>emerging technologies in STEM</strong>.</p>
+        
+                        <p>Let’s build the future, one line of code at a time.</p>
+                        <h2 style="font-size: 50px; margin: 0px;">What I can do</h2>
+                        <div class="skills-container">
+                            <ul>
+                                <li>Flutter & Dart</li>
+                                <li>Python & Django</li>
+                                <li>HTML, CSS, JavaScript</li>
+                                <li>MySQL & Firebase</li>
+                                <li>Graphic Design (Canva)</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="education">
+                        <h2>Education</h2>
+                        <ul>
+                            <li><strong>Bachelor of Science in Computer Science -</strong> Maasai Mara University (Expected: 2028)</li>
+                            <li><strong>Certificate in Software Engineering</strong> - Power Learn Project |May 2024</li>
+                            <li><strong>Certificate in Digital Marketing</strong> - The Toolkit Skills and Innovation Hub |April 2024</li>
+                            <li><strong>Kenya Certificate of Secondary Education</strong> - Dagoretti High School |November 2023</li>
+                        </ul>
+                        <h4 style="font-size: 40px; margin: 0;">Resume</h4>
+                        <p>Download my resume to learn more about my skills, experience, and education.</p>
+                        <a href="{% static 'main/resume.pdf' %}" class="btn" download>Download Resume</a>
+                    </section>
                 </div>
-            </section>
-    
-            <section id="resume">
-                <h2>Resume</h2>
-                <p>
-                    Download my resume to learn more about my skills, experience, and education.
-                </p>
-                <a href="{% static 'main/resume.pdf' %}" class="btn" download>Download Resume</a>
-            </section>
-        </main>
-    
-        <footer>
-            <p>&copy; 2024 Wambugu Moses. All rights reserved.</p>
-        </footer>
+            </div>
         </main>
     </body>
 </html>   
