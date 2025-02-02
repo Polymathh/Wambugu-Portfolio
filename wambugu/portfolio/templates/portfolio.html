@@ -5,21 +5,32 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}"
+        <link rel="stylesheet" href="{% static 'styles.css' %}"
     </head>
     <body>
-        <h1>Portfolio</h1>
-        <p>Explore my work by category. Click on a category to view related projects!</p>
+        <header>
+            <nav>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'portfolio' %}">Projects</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </nav>
+        </header>
+        <main>
+            <h1 style="font-size: 80px; margin: 0;">My Projects</h1>
+        <p style="margin-bottom: 5px;">Welcome to my project showcase!Explore my work, organized into different categories for easy navigation. Each category represents a unique area of expertise, allowing you to dive into the projects that interest you the most. Simply click on a category to view the related projects, discover the ideas behind them, and see how they were brought to life. Whether you're looking for web applications, mobile solutions, or creative digital experiences, there's something here for you.
+        </p>
 
         <div id="portfolio" class="card-container">
             {% for category in categories %}
                 <div class="card">
-                    <h3>{{ category.name }}</h3>
+                    <h3 style="margin: 20px; padding: 20px;">{{ category.name }}</h3>
                     <p>{{ category.description }}</p>
                     <a href="{% url 'category_projects' category.name %}" class="view-projects-btn">View Projects</a>
                 </div>
             {% endfor %}
         </div>
-
+        </main>
     </body>    
 </html>

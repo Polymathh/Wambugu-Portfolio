@@ -5,11 +5,21 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Contact</title>
         {% load static%}
-        <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}"
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
-        <h1>{{ category_name }}</h1>
-        <p>Here are some of my projects under the "{{ category_name }}" </p>
+        <header>
+            <nav>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'portfolio' %}">Projects</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </nav>
+        </header>
+        <main>
+            <h1 style="font-size: 80px; margin: 0;">{{ category_name }}</h1>
+        <p style="font-size: large;">Here are some of my projects under the "{{ category_name }}" </p>
 
         <div class="card-container">
             {% for project in projects %}
@@ -22,8 +32,7 @@
                 <p>No projects available in this category yet.</p>
             {% endfor %}
 
-            <a href="{% url 'portfolio' %}" class="back-btn">Back to Portfolio</a>
-
         </div>
+        </main>        
     </body>
 </html>
