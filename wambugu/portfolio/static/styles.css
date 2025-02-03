@@ -14,12 +14,13 @@ h1 h2, h3, h4 {
 
 header {
     position: fixed; 
-    top: 10px;           
+    top: 15px; 
+    bottom: 10px;          
     left: 0;         
     width: 100%;
-    height: 20px;      
+    height: 50px;      
     background-color: #000000;  
-    padding: 10px 0;  
+    padding:  0;  
     z-index: 1000; 
     margin-bottom: 20px;   
 }
@@ -176,8 +177,9 @@ section {
 }
 
 #education h2 {
-    font-size: 80px;
+    font-size: 90px;
     margin: 0;
+    padding: 0;
 }
 
 #about-text h2 {
@@ -264,6 +266,18 @@ strong {
 .contact1 {
     width: 50%;
     justify-content: center;
+}
+
+.contact1 h1 {
+    font-size: 80px; 
+    margin-top:0; 
+    margin-bottom: 10px;
+}
+
+.contact h1 {
+    font-size: 80px; 
+    margin-top: 5px; 
+    margin-bottom: 5px;
 }
 
 .contact {
@@ -472,20 +486,59 @@ hr {
     }
 
     .container {
-        flex-direction: column;
+        display: flex;
     }
 
-    .column1, .column2 {
-        width: 100%;
-        float: none;
+    .column1 {
+        line-height: 1rem;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+ .column2 h2 {
+        font-size: 45px;
+        margin-top: 0px;
+        padding-top: 20px;
+        align-items: center;
+        height: 250px;
+    }
+
+    .column2 h1{
+        font-size: 100px;
+        margin-bottom: 10px;
+        padding-bottom: 0px;
     }
 
     .name {
         font-size: 50px;
+        margin: 0;
+    }
+
+    #about-text {
+        padding-bottom: 0px;
+        margin-bottom: 0;
+    }
+    .img {
+        align-items: center;
+        margin: 20px;
+    }
+
+    #skills {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .skills-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .btn {
-        width: 100%;
+        width: 140px;
+        float: left;
+        align-items: center;
     }
 
     .socials {
@@ -498,6 +551,8 @@ hr {
 
     .grid-container {
         grid-template-columns: 1fr;
+        justify-content: center;
+    
     }
 
     .card-container {
@@ -513,10 +568,33 @@ hr {
     .blog-posts {
         max-width: 100%;
     }
+    .contact1 h1 {
+        font-size: 40px;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .contact p {
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1rem;
+    }
+
+    .contact  h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+        display: flex;
+    }
+
+    .socials {
+        display: inline-flexbox;
+    }
 
     .form {
         width: 100%;
-        padding: 15px;
+        padding: 0px;
+        float: left;
+        height: 400px;
     }
 
     .card-container2 {
