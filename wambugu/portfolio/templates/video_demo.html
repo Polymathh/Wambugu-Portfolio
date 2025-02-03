@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Demo</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <main>
+        <h2>{{ project.title }} - Video Demo</h2>
+        {% if project.video_demo %}
+            <video controls width="80%">
+                <source src="{{ project.video_demo.url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        {% else %}
+            <p>No video available for this project.</p>
+        {% endif %}
+    </main>
+
+</body>
+</html>

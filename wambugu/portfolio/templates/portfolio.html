@@ -5,11 +5,16 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'styles.css' %}"
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
         <header>
-            <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <nav class="nav-links" >
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -32,5 +37,6 @@
             {% endfor %}
         </div>
         </main>
+        <script src="{% static 'script.js' %}" defer></script>
     </body>    
 </html>

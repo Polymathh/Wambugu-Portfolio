@@ -9,7 +9,12 @@
     </head>
     <body>
         <header>
-            <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <nav class="nav-links">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -19,20 +24,32 @@
         </header>
         <main>
             <h1 style="font-size: 80px; margin: 0;">{{ category_name }}</h1>
-        <p style="font-size: large;">Here are some of my projects under the "{{ category_name }}" </p>
+            <p style="font-size: large;">Here are some of my projects under the "{{ category_name }}" </p>
 
-        <div class="card-container">
-            {% for project in projects %}
-                <div class="card">
-                    <img src="{{ project.image.url}}" alt="{{project.title}}">
-                    <h3>{{ project.title }}</h3>
-                    <p>{{project.description}}</p>
-                </div>
-            {% empty %}
-                <p>No projects available in this category yet.</p>
-            {% endfor %}
-
-        </div>
-        </main>        
+            <div class="card-container2">
+                {% for project in projects %}
+                    <div class="card2">
+                        <img src="{{ project.image.url }}" alt="Project Image">
+                        <div class="overlay">
+                            <h3 style="font-size: 40px; margin: 20px;">{{ project.title }}</h3>
+                            <p>{{ project.description }}</p>
+                            <div class="buttons">
+                                {% if project.live_demo_url %}
+                                    <a href="{{ project.live_demo_url }}" target="_blank" class="btn">Live Demo</a>
+                                {% endif %}
+                                {% if project.video_demo %}
+                                    <a href="{% url 'video_demo' project.id %}" class="btn" target="_blank">Video Demo</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p>No projects available in this category yet.</p>
+                {% endfor %}
+            </div>
+                   
+        
+        </main> 
+        <script src="{% static 'script.js' %}" defer></script>
     </body>
 </html>

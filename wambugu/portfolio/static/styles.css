@@ -103,7 +103,6 @@ a:hover {
     font-family: serif;
 }
 
-/* Buttons */
 .btn {
     background: #86e216;
     color: #000000;
@@ -111,6 +110,7 @@ a:hover {
     border-radius: 30px;
     float: left;
     margin-left: 0;
+    
 }
 
 #education a {
@@ -362,6 +362,201 @@ hr {
     background: #ddd;
     margin: 20px auto;
 }
+
+.card-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px;
+}
+
+.card2 {
+    position: relative;
+    width: 100%;
+    max-width: 600px; 
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.card2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card2:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(134, 226, 22, 0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    color: #000000;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.card2:hover .overlay {
+    opacity: 1;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons a {
+    text-decoration: none;
+    border: solid 1px;
+    border-color: #000000;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px; 
+    margin: 10px; 
+    float: right;
+}
+
+.nav-toggle .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1b3001;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .nav-links a {
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column1, .column2 {
+        width: 100%;
+        float: none;
+    }
+
+    .name {
+        font-size: 50px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .socials {
+        gap: 10px;
+    }
+
+    .socials a {
+        font-size: 24px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .blog-posts {
+        max-width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-container2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 35px;
+    }
+
+    .column2 h1 {
+        font-size: 150px;
+    }
+
+    .column2 h2 {
+        font-size: 60px;
+    }
+
+    .skills-container li {
+        width: 100%;
+    }
+
+    .form button {
+        padding: 12px;
+    }
+}
+
+
+
+
+
+    
+
+
+
+
+
 
 
 
