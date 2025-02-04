@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
           navLinks.classList.remove("active");
       });
   });
-
 });
+
 

@@ -8,7 +8,22 @@
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
-       <h1>Blog</h1> 
+        <header>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <nav class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'portfolio' %}">Projects</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </nav>
+        </header>
+        <main>
+            <h1>Blog</h1> 
        <p style="font-size: large;">Welcome to my blog, where I share insights, ideas, and stories on technology, innovation, and digital growth.</p>
        <div class="blog-post">
             {% for post in posts %}
@@ -33,5 +48,7 @@
                 <hr>
             {% endfor %}
        </div>
+        </main>
+       
     </body>
 </html>
