@@ -12,20 +12,20 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-
-
+# 🔹 Move `BASE_DIR` to the top before it's used
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles'  
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Ensure this directory exists
+]
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-sw-2x6!-ue3zq4cy&a^nprj4p1u+i2_ns!6c8j^xwz$1#o9o95'
@@ -33,8 +33,7 @@ SECRET_KEY = 'django-insecure-sw-2x6!-ue3zq4cy&a^nprj4p1u+i2_ns!6c8j^xwz$1#o9o95
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.railway.app']
 
 # Application definition
 
@@ -123,14 +122,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-STATIC_URL = 'static/'
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
