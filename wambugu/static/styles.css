@@ -528,20 +528,8 @@ hr {
     animation: flip 1.8s ease-in-out; /* Increased from 1s to 1.8s */
 }
 
-@keyframes flip {
-    0% {
-        transform: rotateY(0deg);
-    }
-    40% {
-        transform: rotateY(90deg); /* Pause halfway */
-    }
-    60% {
-        transform: rotateY(270deg); /* Another pause */
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
-}
+
+
 
 
 @media (max-width: 768px) {
