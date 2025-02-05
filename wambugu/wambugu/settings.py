@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-sw-2x6!-ue3zq4cy&a^nprj4p1u+i2_ns!6c8j^xwz$1#o9o95
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wambugu-moses.vercel.app','.vercel.app', '127.0.0.1', '.railway.app']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
 # Application definition
 
